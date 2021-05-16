@@ -1,14 +1,15 @@
 #! /usr/bin/ruby
 require './bundle/bundler/setup'
 require "notion"
+require 'alfred-3_workflow'
 require './config'
 
-NOTION_CLIENT = Notion::Client.new(token: NOTION_TOKEN)
+NOTION_CLIENT = Notion::Client.new(token: notion_token)
 
 def add_todo(title)
   req = NOTION_CLIENT.create_page({
       "parent": {
-        "database_id": DATABASE_ID
+        "database_id": database_id
       },
       "properties": {
         "Name": {
@@ -27,3 +28,5 @@ def add_todo(title)
 end
 
 add_todo(ARGV[0])
+
+puts ARGV[0]

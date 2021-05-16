@@ -6,6 +6,55 @@
 	<string>NotionAddTodo</string>
 	<key>connections</key>
 	<dict>
+		<key>3FE916E6-5DF2-4F2D-89D5-9A173A4D97AC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2961BBC7-5113-479E-AB51-9AD592D3A2E4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4D116480-FE60-4372-A466-0FD2AE80215E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6CEB2981-0199-4AB5-9A7C-636E11E37042</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>92DDBEB5-8A92-49CD-836F-FF878F97719C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>92DDBEB5-8A92-49CD-836F-FF878F97719C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AE863353-1E69-4771-80E8-4D64D38717CF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>9BA2B24B-1D28-4A84-A804-B222D4487395</key>
 		<array>
 			<dict>
@@ -67,6 +116,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>✅ Todo added</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>FABE86D8-E738-43D4-A461-D5301AE91A3E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -80,12 +150,59 @@ bundle exec ./notion_add_todo.rb $1</string>
 				<key>scriptfile</key>
 				<string>notion_add_todo.rb</string>
 				<key>type</key>
-				<integer>0</integer>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>9BA2B24B-1D28-4A84-A804-B222D4487395</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>todo-config-database</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Database list is loading...</string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>notion_select_database.rb</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Notion todo - Select Database</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>3FE916E6-5DF2-4F2D-89D5-9A173A4D97AC</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -101,12 +218,104 @@ bundle exec ./notion_add_todo.rb $1</string>
 				<key>text</key>
 				<string></string>
 				<key>title</key>
-				<string>Todo added</string>
+				<string>{query}</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>FABE86D8-E738-43D4-A461-D5301AE91A3E</string>
+			<string>2961BBC7-5113-479E-AB51-9AD592D3A2E4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>adduuid</key>
+				<false/>
+				<key>allowemptyfiles</key>
+				<true/>
+				<key>createintermediatefolders</key>
+				<true/>
+				<key>filename</key>
+				<string>~/.notion_add_todo_alfred/database_id.txt</string>
+				<key>filetext</key>
+				<string>{query}</string>
+				<key>relativepathmode</key>
+				<integer>0</integer>
+				<key>type</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.writefile</string>
+			<key>uid</key>
+			<string>4D116480-FE60-4372-A466-0FD2AE80215E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>todo-config-token</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Notion todo - Config token</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>6CEB2981-0199-4AB5-9A7C-636E11E37042</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>Notion token set!</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>AE863353-1E69-4771-80E8-4D64D38717CF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>adduuid</key>
+				<false/>
+				<key>allowemptyfiles</key>
+				<true/>
+				<key>createintermediatefolders</key>
+				<true/>
+				<key>filename</key>
+				<string>~/.notion_add_todo_alfred/notion_token.txt</string>
+				<key>filetext</key>
+				<string>{query}</string>
+				<key>relativepathmode</key>
+				<integer>0</integer>
+				<key>type</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.writefile</string>
+			<key>uid</key>
+			<string>92DDBEB5-8A92-49CD-836F-FF878F97719C</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -115,12 +324,54 @@ bundle exec ./notion_add_todo.rb $1</string>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>2961BBC7-5113-479E-AB51-9AD592D3A2E4</key>
+		<dict>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>330</integer>
+		</dict>
+		<key>3FE916E6-5DF2-4F2D-89D5-9A173A4D97AC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>190</integer>
+			<key>ypos</key>
+			<integer>330</integer>
+		</dict>
+		<key>4D116480-FE60-4372-A466-0FD2AE80215E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>450</integer>
+		</dict>
+		<key>6CEB2981-0199-4AB5-9A7C-636E11E37042</key>
+		<dict>
+			<key>xpos</key>
+			<integer>200</integer>
+			<key>ypos</key>
+			<integer>590</integer>
+		</dict>
+		<key>92DDBEB5-8A92-49CD-836F-FF878F97719C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>590</integer>
+		</dict>
 		<key>9BA2B24B-1D28-4A84-A804-B222D4487395</key>
 		<dict>
 			<key>xpos</key>
 			<integer>360</integer>
 			<key>ypos</key>
 			<integer>190</integer>
+		</dict>
+		<key>AE863353-1E69-4771-80E8-4D64D38717CF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>540</integer>
+			<key>ypos</key>
+			<integer>590</integer>
 		</dict>
 		<key>E270CE5C-5BAE-4164-9F9C-E220F4F085D6</key>
 		<dict>
@@ -137,6 +388,17 @@ bundle exec ./notion_add_todo.rb $1</string>
 			<integer>190</integer>
 		</dict>
 	</dict>
+	<key>variables</key>
+	<dict>
+		<key>NOTION_TOKEN</key>
+		<string>secret_GUzrDVsO2B8wzrtWQ3Iqu9pM7CsVWPirFHpMheOEJ4x</string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>NOTION_TOKEN</string>
+	</array>
+	<key>version</key>
+	<string></string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
